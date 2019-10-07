@@ -7,17 +7,20 @@ import { DestinationResolver } from './destination.resolver';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { ApiModule } from '../api';
+import { ActivityModule } from '../activity';
 
 @NgModule({
 	imports: [
 		DestinationRoutingModule,
 		CommonModule,
 		HttpClientModule,
+		ActivityModule,
 		ApiModule,
 	],
 	providers: [
 		DestinationService,
 		DestinationResolver,
+
 	],
 	declarations: [
 		DestinationComponent,
