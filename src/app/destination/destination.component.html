@@ -13,8 +13,8 @@
 					</div>
 				</div>
 				<div class="grid">
-					<div class="card" *ngFor="let activity of activities | async">
-						<app-activity class="card-content"[activity]="activity"></app-activity>
+					<div class="grid-md" *ngFor="let activity of activities | async">
+						<app-activity class="card" [activity]="activity"></app-activity>
 					</div>
 				</div>
 			</section>

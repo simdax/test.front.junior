@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, EMPTY } from 'rxjs';
 import { IActivity } from './activity.model';
 import { HttpClient } from '@angular/common/http';
+import { catchError } from 'rxjs/operators';
 
 @Injectable()
 export class ActivityService {
@@ -9,6 +10,9 @@ export class ActivityService {
 	
 	getActivitiesByDestination(destination: { id: string })
 		: Observable<IActivity[]> {
-		return this.http.get<IActivity[]>(`/api/activities?destinationId=${destination.id}`);
+		return this.http.get<IActivity[]>(`/api/activities?destinationId=${destination.id}`)
+		.pipe(catchError(() => {
+			return EMPTY;
+		}));
 	}
 }

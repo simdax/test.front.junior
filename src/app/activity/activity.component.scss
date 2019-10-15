@@ -1,21 +1,15 @@
  .activity{
-	margin: 2vw;
+	margin: 10px;
 	img{
+		background-image: url("https://bitsofco.de/content/images/2018/12/broken-1.png");
+		background-position: center;	
+		background-size: 80%;
 		margin: 0 auto 10px auto;
 		display: block;
-		width: 150px;
-		height: 150px;
+		width: 200px;
+		height: 200px;
+		border-radius: 50%;
+		border: 2px solid rgb(156, 124, 124);
+		box-shadow: 0 0 8px rgba(0,0,0, 0.8);
 	}
 }
-// @media only screen and (max-width: 768px) {
-// 	.presentation-section {
-// 		padding: 2rem 1rem 1rem;
-// 	}
-// 	.infos-section {
-// 		height: auto;
-
-// 		app-destination-gallery {
-// 			transform: none;
-// 		}
-// 	}
-// }
